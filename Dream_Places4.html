@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <link rel="stylesheet" type="text/css"
+           href="style.css">
+     <link rel="stylesheet" type="text/css"
+           href="https://fonts.googleapis.com/css?family=Baloo+Tamma">
+     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+     <link rel="icon" 
+           type="image/png" 
+           href="thinking.jpeg">
+     <title>United KingDom London</title>
+    </head>
+<body>
+    <ul id="navbar">
+              <li class ="navitem"><a href="Dream_Places.html">Dream Vacation</a></li>
+              <li class ="navitem"><a href="Dream_Places2.html">London</a></li>
+			  <li class ="navitem"><a href="Dream_Places3.html">Paris</a></li>
+			  <li class ="navitem"><a class="active" href="Dream_Places4.html">Tokyo</a></li>
+    </ul>
+	<div id="main"> 
+         <h1>Tokyo, Japan</h1>        
+    </div>  
+</body>
+<body>
+
+<div id="map" style="width:100%;height:500px"></div>
+
+<script>
+function myMap() {
+  var myCenter = new google.maps.LatLng(35.6691088,139.6012944);
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+     center: myCenter, 
+     zoom: 11
+  };
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+  var marker = new google.maps.Marker({position:myCenter});
+  marker.setMap(map);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4GsB_2SimZJN0sJZDjHPwnv6dLAeYxP0&callback=myMap"
+    async defer></script>
+
+</body>
+</html>
